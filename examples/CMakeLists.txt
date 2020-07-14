@@ -15,6 +15,8 @@
 #  endif()
 #endforeach()
 
+include_directories(AFTER ${CMAKE_CURRENT_SOURCE_DIR}/.. )
+
 add_subdirectory(calc)
 add_subdirectory(date_test)
 add_subdirectory(gen_cpp_from_idl)

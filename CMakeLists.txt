@@ -9,9 +9,12 @@
 cmake_minimum_required (VERSION 3.5)
 project(lexertl VERSION 0.1.0)
 
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED on)
+
 # Define project
 add_library(lexertl INTERFACE)
-target_include_directories(lexertl INTERFACE 
+target_include_directories(lexertl INTERFACE
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 	$<INSTALL_INTERFACE:include>
 )
@@ -77,4 +80,3 @@ write_basic_package_version_file("lexertlConfigVersion.cmake"
 install(FILES "lexertlConfig.cmake" "${CMAKE_CURRENT_BINARY_DIR}/lexertlConfigVersion.cmake"
 	DESTINATION lib/cmake/lexertl
 )
-
